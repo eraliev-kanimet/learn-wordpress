@@ -4,6 +4,14 @@ add_action('wp_enqueue_scripts', 'sparrow_enqueue_scripts');
 
 add_action('wp_footer', 'sparrow_wp_footer');
 
+add_action('after_setup_theme', 'sparrow_setup');
+
+function sparrow_setup(): void
+{
+    register_nav_menu('top', 'Top Menu');
+    register_nav_menu('footer', 'Footer Menu');
+}
+
 function sparrow_enqueue_scripts(): void
 {
     $path = get_template_directory_uri() . '/assets/';
