@@ -12,6 +12,12 @@ function sparrow_after_setup_theme(): void
 {
     register_nav_menu('top', 'Top Menu');
     register_nav_menu('footer', 'Footer Menu');
+
+    add_theme_support('title-tag');
+
+    add_theme_support('post-thumbnails', ['post']);
+
+    add_image_size('post-thumbnail', 1300, 500, true);
 }
 
 function sparrow_enqueue_scripts(): void
