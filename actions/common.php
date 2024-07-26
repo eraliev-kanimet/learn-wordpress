@@ -9,7 +9,7 @@ function sparrow_after_setup_theme(): void
 {
     add_theme_support('title-tag');
 
-    add_theme_support('post-thumbnails', ['post']);
+    add_theme_support('post-thumbnails', ['post', 'portfolio']);
 
     add_theme_support('post-formats', ['aside', 'gallery',]); // 'link', 'image', 'quote', 'video', 'audio'
 
