@@ -11,6 +11,8 @@ function sparrow_after_setup_theme(): void
 
     add_theme_support('post-thumbnails', ['post']);
 
+    add_theme_support('post-formats', ['aside', 'gallery',]); // 'link', 'image', 'quote', 'video', 'audio'
+
     register_nav_menu('top', 'Top Menu');
     register_nav_menu('footer', 'Footer Menu');
 
