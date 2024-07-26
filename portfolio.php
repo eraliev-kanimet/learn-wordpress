@@ -30,40 +30,7 @@ get_template_part('components/hero', null, [
             </div>
 
             <div id="primary" class="eight columns portfolio-list">
-                <div id="portfolio-wrapper" class="bgrid-halves cf">
-
-                    <?php
-                    $posts = get_posts([
-                        'post_type' => 'portfolio',
-                    ]);
-
-                    foreach ($posts as $post):
-                        setup_postdata($post);
-
-                        $link = get_permalink();
-                    ?>
-
-                        <div class='columns portfolio-item'>
-                            <div class='item-wrap'>
-                                <a href='<?= $link ?>'>
-                                    <?php the_post_thumbnail() ?>
-                                    <div class='overlay'></div>
-                                    <div class='link-icon'><i class='fa fa-link'></i></div>
-                                </a>
-                                <div class='portfolio-item-meta'>
-                                    <h5><a href='<?= $link ?>'><?php the_title() ?></a></h5>
-                                    <p><?php the_excerpt() ?></p>
-                                </div>
-                            </div>
-                        </div>
-
-                    <?php
-                    endforeach;
-
-                    wp_reset_postdata();
-                    ?>
-
-                </div>
+                <?php get_template_part('components/portfolio', 'list', ['class' => 'bgrid-halves cf']) ?>
             </div>
         </section>
     </div>
