@@ -9,6 +9,8 @@ require_once 'actions/short-code.php';
 
 add_action('init', 'sparrow_register_post_types');
 
+add_action('init', 'sparrow_register_taxonomies');
+
 add_action('after_setup_theme', 'sparrow_after_setup_theme');
 
 add_action('wp_enqueue_scripts', 'sparrow_enqueue_scripts');
