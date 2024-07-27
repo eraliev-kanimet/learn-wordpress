@@ -11,7 +11,6 @@ $link = get_permalink();
         </a>
         <div class='portfolio-item-meta'>
             <h5><a href='<?= $link ?>'><?php the_title() ?></a></h5>
-            <p><?php the_excerpt() ?></p>
         </div>
     </div>
 </div>
