@@ -3,8 +3,8 @@
 get_header();
 
 get_template_part('components/hero', null, [
-    'header' => 'Our Amazing Works<span>.</span>',
-    'text' => 'Aenean condimentum, lacus sit amet luctus lobortis, dolores et quas molestias excepturi enim tellus ultrices elit, amet consequat enim elit noneas sit amet luctu.',
+    'header' => get_the_title(),
+    'text' => get_the_excerpt(),
 ])
 
 ?>
